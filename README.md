@@ -2,11 +2,14 @@
 
 ## بخش اول
 همانطور که مشاهده میکنید، با انجام profiling بر روی JavaCup مشاهده میکنیم که بیشترین مصرف منابع را تابع temp دارد. در ادامه اسکرین شات های مربوطه را مشاهده می کنید:
+
 ![image](https://github.com/royaghavami/ProfilingTest/assets/59202308/ab91a9a0-2839-4543-9044-49660a071e6b)
 
 ![1](https://github.com/royaghavami/ProfilingTest/assets/59202308/7db5af82-61e3-4e40-b33f-1fb3e52fd574)
 
+
 همانطور که مشاهده می کنید، در خط 29 ام بیشترین میزان مصرف cpu time را داریم:
+
 ![2](https://github.com/royaghavami/ProfilingTest/assets/59202308/a431cff8-cfa1-4c81-b853-edc8c98513da)
 
 #### اسکرین شات CPU flame graph
@@ -40,6 +43,8 @@
 -  استفاده از عملگرهای منطقی: به جای استفاده از چند دستور مقایسه، می توانیم از عملگرهای منطقی (&& و ||) برای ترکیب conditionها استفاده کنیم. این باعث کاهش تعداد عملیات انجام شده می شود.
 - اجتناب از محاسبات غیر ضروری: ما فقط باید i * i و j * j را یک بار محاسبه کنیم و نه چندین بار.
 - استفاده از StringBuilder برای الحاق رشته ها: به جای استفاده از چندین System.out.println()، می توانیم از StringBuilder برای ساخت موثر رشته خروجی استفاده کنیم.
+
+  
 ![14](https://github.com/royaghavami/ProfilingTest/assets/59202308/9782d399-4716-480d-8673-5425dc241c0d)
 
   
