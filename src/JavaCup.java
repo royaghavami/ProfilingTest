@@ -14,21 +14,33 @@ public class JavaCup {
         temp();
         eval(i, j, k);
     }
-    public static void eval(int i, int j, int k)
-    {
-        if (i * i + j * j == k * k || i * i == j * j + k * k || j * j == i * i + k * k)
-        {
-            System.out.println("YES");
+
+    public static void eval(int i, int j, int k) {
+        int iSquared = i * i;
+        int jSquared = j * j;
+        int kSquared = k * k;
+
+        boolean condition1 = iSquared + jSquared == kSquared;
+        boolean condition2 = iSquared == jSquared + kSquared;
+        boolean condition3 = jSquared == iSquared + kSquared;
+
+        StringBuilder output = new StringBuilder();
+        if (condition1 && condition2 && condition3) {
+            output.append("YES");
+        } else {
+            output.append("NO");
         }
-        else { System.out.println("NO"); }
+        System.out.println(output.toString());
     }
+
+
     public static void temp() {
-        ArrayList a = new ArrayList();
-        for (int i = 0; i < 10000; i++)
-        {
-            for (int j = 0; j < 20000; j++) {
-                a.add(i + j);
-            }
+        ArrayList a = new ArrayList<>();
+        int totalNumbers = 20000 * 10000;
+        a.ensureCapacity(totalNumbers);
+        for (int i = 0; i < totalNumbers; i++) {
+            a.add(i % 20000 + i / 20000);
         }
     }
+
 }
